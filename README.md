@@ -14,22 +14,12 @@ Encompassing dozens of job disciplines, the video game industry, now a bigger mo
 This undertaking aims to use video game sales data to determine how the popularity of different video game genres has changed over the years so that we can explore what are the kind of games that video game publishers are investing the most in.
 
 
-
-
 Key words:
 
 
 Data Visualization, Python, Matplotlib, Seaborn, Plotly, Bar Chart, Heatmap, Word cloud 
 
 
-
-
-
-
-
-
-
-1. Videogames are a bigger industry than movies and North American sports combined, thanks to the pandemic - MarketWatch 
 TABLE OF CONTENTS
 
 A.	Research Question	
@@ -50,9 +40,11 @@ This document provides details on the topic, dataset, and methodology I chose an
 
 
 A.	Research Question
+
 This undertaking aims to use video game sales data to determine how the popularity of different video game genres has changed over the years so that we can explore what are the kind of games that video game publishers are investing the most in. I have explored the dataset and this research question primarily through visualizations.
 
 B.	Dataset
+
 The dataset used for this project (Video Game Sales and Rating | Kaggle) contains a list of video games with sales greater than 10,000 copies. It is a web scrape from VGChartz along with manually entered year of release values for most games with a missing year of release. This dataset has been provided by Kendall Gillies. 
 The dataset comprises one .CSV file.
 The fields that have been used from this dataset are as follows:
@@ -71,11 +63,13 @@ Global_Sales 	 Total worldwide sales (in million units)
 
 
 C.	Tools and Techniques Used
+
 The project has been implemented using the Python programming language using the various built-in libraries and packages for plotting and visualization. 
 MatPlotLib, Seaborn and Plotly libraries have been used for the visualizations. 
 The coding has been implemented in Jupyter Notebook.
 
 D.	Data Cleanup
+
 The data has been cleaned up and prepared to account for the following requirements (details and implementation provided in the code in the GitHub link):
 i.	First, if there are any records with unknown Release Years, then we would need to omit those records as this incomplete information will affect the correctness of our visualizations.
 ii.	This dataset has records for videogames released till January of 2017 - all entries for the year 2017 will be omitted because the sales are just for the month of January, not the whole year.
@@ -91,6 +85,7 @@ vii.	Some games might have been listed with their Release Year earlier than the 
 
 
 E.	Exploratory Data Analysis
+
 The following details have been explored in the exploratory data analysis:
 i.	Checking if there are any duplicate values: there are none.
 ii.	Unique Platforms in the dataset
