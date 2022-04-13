@@ -17,17 +17,28 @@ Data Visualization, Python, Matplotlib, Seaborn, Plotly, Bar Chart, Heatmap, Wor
 
 TABLE OF CONTENTS
 
-A.	Research Question	
+A.	Research Question
+
 B.	Dataset	
-C.	Tools and Techniques Used	
+
+C.	Tools and Techniques Used
+
 D.	Data Cleanup	
+
 E.	Exploratory Data Analysis	
+
 F.	What are the top platforms with the most number of games sold over the years?	
+
 G.	What are the best-selling genres for each decade?	
+
 H.	Examining Trends in Video Games Sales History	
-I.	Word Cloud - a fun visualization to conclude the report.	
+
+I.	Word Cloud - a fun visualization to conclude the report.
+
 J.	APPENDIX | DATASET & GITHUB LINKS	
+
 K.	REFERENCES	
+
 
 	
 	 
