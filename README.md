@@ -5,7 +5,9 @@ ABSTRACT
 
 
 Enthralling and rejuvenating in equal measure, nothing helps you unwind better than whipping up a custom 15-minute Sacrifice match in Quake Champions at the end of your day. In a beautiful yin and yang of the mind, demanding laser focus and intense hand-eye coordination while at the same time giving you the space to be deep in thought, the act of actively participating in an entertainment product where you are the protagonist has a lot of merits to its name. 
+
 Encompassing dozens of job disciplines, the video game industry, now a bigger money-maker than the global movie and North American sports industries combined1, has been around for decades and is only projected to keep growing.1 With the advent of photo-realistic graphics, among the many meteoric improvements in technology, video games are becoming increasingly accessible and mainstream. 
+
 This undertaking aims to use video game sales data to determine how the popularity of different video game genres has changed over the years so that we can explore what are the kind of games that video game publishers are investing the most in.
 
 
@@ -53,17 +55,29 @@ B.	Dataset
 
 The dataset used for this project (Video Game Sales and Rating | Kaggle) contains a list of video games with sales greater than 10,000 copies. It is a web scrape from VGChartz along with manually entered year of release values for most games with a missing year of release. This dataset has been provided by Kendall Gillies. 
 The dataset comprises one .CSV file.
+
 The fields that have been used from this dataset are as follows:
+
 Field	Description
+
 Name 	 The game's name
+
 Platform 	 Platform on which the game was released
+
 YearofRelease 	 Year of the game's release
+
 Genre 	 Genre of the game
+
 Publisher 	 Publisher of the game
+
 NA_Sales 	 Sales in North America (in million units)
+
 EU_Sales 	 Sales in Europe (in million units)
+
 JP_Sales 	 Sales in Japan (in million units)
+
 Other_Sales 	 Sales in the rest of the world (in million units)
+
 Global_Sales 	 Total worldwide sales (in million units)
 
 
@@ -71,19 +85,29 @@ Global_Sales 	 Total worldwide sales (in million units)
 C.	Tools and Techniques Used
 
 The project has been implemented using the Python programming language using the various built-in libraries and packages for plotting and visualization. 
+
 MatPlotLib, Seaborn and Plotly libraries have been used for the visualizations. 
+
 The coding has been implemented in Jupyter Notebook.
 
 D.	Data Cleanup
 
 The data has been cleaned up and prepared to account for the following requirements (details and implementation provided in the code in the GitHub link):
+
 i.	First, if there are any records with unknown Release Years, then we would need to omit those records as this incomplete information will affect the correctness of our visualizations.
+
 ii.	This dataset has records for videogames released till January of 2017 - all entries for the year 2017 will be omitted because the sales are just for the month of January, not the whole year.
+
 iii.	The Year_of_Release column has float values for years - this will be changed to integers.
+
 iv.	Renaming the Genre value 'Platform' to 'Platformer' to avoid confusion with the column of the same name.
+
 ('Platformers' are a video game genre and subgenre of action games in which the core objective is to move the player character between points in a rendered environment. Platformer games are characterized by their level design featuring uneven terrain and suspended platforms of varying height that requires use of the player character's abilities.)
+
 v.	Renaming some Platform column values to provide clarification.
+
 vi.	Adding another column to the dataset that includes the launch years for all respective platforms (retrieved from Wikipedia).
+
 vii.	Some games might have been listed with their Release Year earlier than the Launch Year of their respective platforms - extracting all such games and fixing their dates where possible, dropping the ones where fixing the dates is not possible.
 
 
@@ -93,15 +117,25 @@ vii.	Some games might have been listed with their Release Year earlier than the 
 E.	Exploratory Data Analysis
 
 The following details have been explored in the exploratory data analysis:
+
 i.	Checking if there are any duplicate values: there are none.
+
 ii.	Unique Platforms in the dataset
+
 iii.	Unique Genres in the dataset
+
 iv.	Years of Release in the dataset
+
 v.	Unique Publishers in the dataset
+
 vi.	Number of null values in all columns
+
 vii.	Dataframe Info
+
 viii.	Generating Descriptive Statistics
+
 ix.	Plotting Top 10 Global Best-Sellers as of 2016
+
 
   ![image](https://user-images.githubusercontent.com/82007603/163269392-c0530e2b-bfff-44b8-a577-8805b618f868.png)
   
@@ -139,18 +173,27 @@ G.	What are the best-selling genres for each decade?
 	a.	Design Choice for this Chart: This vertical bar chart race has been chosen so that it is easy to compare the genres with the highest sales for each respective decade. It is color coded for easy identification of the respective genres.
 
 H.	Examining Trends in Video Games Sales History
+
 Simple linear regression has been used to fit a line to the data to explore basic increasing/decreasing trends.
+
 	i.	Determining Usable Years
+	
 Video game sales before a certain point in time would not be very relevant for our visualizations because not all genres of video games are represented in the data until a certain point in time. To determine the starting year, two things should be considered: the yearly global sales and at what point in time were all genres being continuously released. Fortunately, a starting year can be chosen by looking at the total yearly global sales, the cumulative proportion of yearly global sales and the heat map of global sales of games released each year by genre.
+
 Using the following plots below the following can be inferred:
+
 		a.	All genres are not fully represented until the year 1991.
+		
 		b.	More than 95% of the global sales occur after 1991.
+		
  
  ![image](https://user-images.githubusercontent.com/82007603/163269789-3b6d81f2-6d68-4571-b47d-f4ca046d5854.png)
 
 	a.	Design Choice for these Charts: These vertical bar charts make it easy to see the total yearly sales as well as the cumulative proportions which are always increasing in nature. In the second chart we can see that 95% of all video game sales till the year 2016 were made after the year 1991.
+	
 
 Heatmap of Global Sales (in million units) of Games Released Each Year by Genre:
+
 
 ![image](https://user-images.githubusercontent.com/82007603/163269821-49959ceb-4237-4573-a1f4-9fe56fa35867.png)
  
